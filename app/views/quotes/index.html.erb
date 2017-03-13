@@ -1,6 +1,12 @@
 <h1 align="center">PRINCESS CAROLYN QUOTES</h1>
 <% @all_quotes.each do |quote| %>
 	<div class="layer">
+	<% if @all_quotes.blank? %>
+	<h4>There are no quotes containing the term <%= params[:search] %></h4>
+	<% end %>
+
+
+
 		<h2><%= link_to quote.quote, quote.url %></h2>
 		<!-- <p><%= quote.quote %></p> -->
 		<p><%= link_to "Delete Quote", quote,

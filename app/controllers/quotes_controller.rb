@@ -1,6 +1,11 @@
 class QuotesController < ApplicationController
   def index
   	@all_quotes = Quote.page(params[:page]).per(25)
+  	if params[:search]
+  		@all_quotes = Quote.search(params[:search]).order("created_at DESC")
+  	else
+  		@all_quotes = Quote.all.order("created_at DESC")
+  	end
   end
 
   def new
