@@ -3,11 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background: #a71b3e;
-	color: white;
-	font: 14px/1.5 Helvetica, Arial, sans-serif;
+	text-align: center;
+	background-image: url(/assets/PrincessCarolyn.png);
+	color: black;
+	font: 20px/1.5 "Comic Sans MS", cursive, sans-serif;
 	margin: 20px auto;
-	width: 500px;
+	width: 900px;
+}
+
+.layer {
+	background-color: rgba(248, 247, 216, 0.8);
+}
+
+.myButton {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-align:left;
 }
 
 a {
