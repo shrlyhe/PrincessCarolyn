@@ -1,0 +1,14 @@
+<h1>Quotes</h1>
+<% @all_quotes.each do |quote| %>
+	<div class="quote">
+		<h2><%= link_to quote.quote, quote.url %></h2>
+		<!-- <p><%= quote.quote %></p> -->
+		<p><%= link_to "Delete Quote", quote,
+		:confirm => "Are you sure?",
+		:method => :delete %></p>
+
+	</div>
+<% end %>
+
+<p><%= link_to "Add a quote!", new_quote_path %></p>
+<p><%= paginate @all_quotes %></p>
