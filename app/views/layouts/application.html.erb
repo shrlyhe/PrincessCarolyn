@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Princesscarolynquotes</title>
-    <%= csrf_meta_tags %>
+<head>
+	<title>Princess Carolyn Quotes</title>
+	<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+	<%= yield %>
+	<%= form_tag(quotes_path, :method => "get", id: "search-form") do %>
+	<%= text_field_tag :search, params[:search], placeholder: "Search quotes" %>
+	<%= submit_tage "Search", :name => nil %>
+	<% end %>
+
+</body>
 </html>
